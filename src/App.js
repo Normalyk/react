@@ -16,7 +16,7 @@ class App extends Component {
         return (
             <div>
                 {this.usersWithAddress.map(value => {
-                    return(<usersWithAddress item = {value}/>)
+                    return(<UserAdress item = {value}/>)
                 })
                 }
             </div>
