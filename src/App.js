@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import PostComponent from "./components/post/postComponent";
-import AllPostsComponent from "./components/allPosts/allPostsComponent";
+import CommentComponent from "./components/comments/commentComponent";
+import AllCommentsComponent from "./components/allComments/allCommentsComponent";
 
 class App extends Component {
 
     render() {
         return (
             <div>
-                <AllPostsComponent/>
+                <AllCommentsComponent/>
             </div>
         );
     }
