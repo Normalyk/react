@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PostComponent from "../post/postComponent";
 
 class AllPostsComponent extends Component {
-    state = {posts: [], classState: 'one', chosenPosts: null};
+    state = {posts: [], chosenPosts: null};
     flag = false;
 
     componentDidMount() {
@@ -21,7 +21,7 @@ class AllPostsComponent extends Component {
     };
 
     render() {
-        let {posts, classState, chosenPosts} = this.state;
+        let {posts, chosenPosts} = this.state;
         return (
             <div>
                 {
