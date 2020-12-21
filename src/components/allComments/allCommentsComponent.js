@@ -3,17 +3,6 @@ import CommentComponent from "../comments/commentComponent";
 
 class AllCommentsComponent extends Component {
     state = {comment: [], chosenComment: null};
-    flag = false;
-
-    componentDidMount() {
-
-        fetch('https://jsonplaceholder.typicode.com/comments')
-            .then(value => value.json())
-            .then(commentsFromAPI => {
-                this.setState({comment: commentsFromAPI});
-            });
-    }
-
 
     selectThisComment = (id) => {
         let chosenComment = this.state.comment.find(value => value.id === id);
