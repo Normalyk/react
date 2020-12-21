@@ -3,7 +3,6 @@ import PostComponent from "../post/postComponent";
 
 class AllPostsComponent extends Component {
     state = {posts: [], chosenPosts: null};
-    flag = false;
 
     componentDidMount() {
 
