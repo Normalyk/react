@@ -3,7 +3,6 @@ import CommentComponent from "../comments/commentComponent";
 
 class AllCommentsComponent extends Component {
     state = {comment: [], chosenComment: null};
-    flag = false;
 
     componentDidMount() {
 
