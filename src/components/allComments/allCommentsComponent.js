@@ -6,20 +6,23 @@ class AllCommentsComponent extends Component {
     commentService = new commentService();
     state = {comment: [], chosenComment: null};
 
+    // selectThisComment = (id) => {
+    //     let chosenComment = this.state.comment.find(value => value.id === id);
+    //     this.setState({chosenComment});
+    // };
+
     selectThisComment = (id) => {
-        let chosenComment = this.state.comment.find(value => value.id === id);
-        this.setState({chosenComment});
+        this.commentService.getCommentByID(id).then(value => this.setState({chosenComment:value}));
     };
 
-    customComment(){
-        this.commentService.getAllComments().then(value => this.setState({comment: value}))
+    customComment() {
+        this.commentService.getAllComments().then(value => this.setState({comment: value}));
     }
 
     render() {
         let {comment, chosenComment} = this.state;
         return (
             <div>
-
                 {
                     comment.map(value => (
                         <CommentComponent item={value}
@@ -30,7 +33,7 @@ class AllCommentsComponent extends Component {
                 }
                 <hr/>
                 {
-                    chosenComment && <CommentComponent item={chosenComment} isShowButton{false}/>
+                    chosenComment && <CommentComponent item={chosenComment} isShowButton={false}/>
                 }
 
             </div>
