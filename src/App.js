@@ -1,13 +1,11 @@
 import React, {Component} from 'react';
-import CommentComponent from "./components/comments/commentComponent";
-import AllCommentsComponent from "./components/allComments/allCommentsComponent";
+import AllComments from "./components/allComments/AllComments";
 
 class App extends Component {
-
     render() {
         return (
             <div>
-                <AllCommentsComponent/>
+            <AllComments/>
             </div>
         );
     }

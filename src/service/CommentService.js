@@ -1,5 +1,4 @@
-export class commentService {
-
+export class CommentService {
     url = 'https://jsonplaceholder.typicode.com/comments';
 
     getAllComments() {
@@ -10,7 +9,4 @@ export class commentService {
             });
     }
 
-    getCommentByID(id) {
-        return fetch(`url/${id}`).then(value => value.json()).then(value => value);
-    }
 }
